@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سمیرا کریمی | وکیل پایه یک دادگستری</title>
   <meta name="description" content="دفتر وکالت سمیرا کریمی – وکیل پایه یک دادگستری با شماره پروانه ۳۷۹۷۰">
+  
+  <!-- Font Awesome for Telegram and WhatsApp icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
     /* ===== RESET & BASE ===== */
     * {
@@ -354,30 +358,6 @@
       border-color: var(--pure-gold);
     }
 
-    .btn-whatsapp {
-      background: var(--whatsapp-green);
-      color: white;
-      border: none;
-    }
-
-    .btn-whatsapp:hover {
-      background: #128C7E;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-telegram {
-      background: var(--telegram-blue);
-      color: white;
-      border: none;
-    }
-
-    .btn-telegram:hover {
-      background: #006699;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 136, 204, 0.3);
-    }
-
     @keyframes fadeUp {
       to {
         opacity: 1;
@@ -461,7 +441,7 @@
 
     .about-stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       text-align: center;
     }
@@ -569,7 +549,7 @@
       text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
     }
 
-    /* ===== CONTACT SECTION - UPDATED WITH ALL MESSENGERS ===== */
+    /* ===== CONTACT SECTION ===== */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -630,7 +610,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.3rem;
+      gap: 0.5rem;
     }
 
     .contact-btn i {
@@ -908,14 +888,10 @@
       </div>
       <div class="about-content">
         <div class="glass-card about-text">
-          <p><span class="about-highlight">سمیرا کریمی</span>، وکیل پایه یک دادگستری با ۱۵ سال تجربه موفق در دعاوی ملکی، کیفری و حقوقی. فارغ‌التحصیل دکترای حقوق خصوصی از دانشگاه تهران با درجه عالی.</p>
+          <p><span class="about-highlight">سمیرا کریمی</span>، وکیل پایه یک دادگستری با سال‌ها تجربه موفق در دعاوی ملکی، کیفری، مالیاتی و حقوقی. فارغ‌التحصیل دکترای حقوق خصوصی از دانشگاه تهران با درجه عالی.</p>
           <p style="margin-top: 1.5rem;">عضو کانون وکلای دادگستری مرکز و مشاور حقوقی چندین شرکت معتبر. رویکرد ما ارائه خدمات حقوقی با بالاترین استانداردهای حرفه‌ای و اخلاقی است.</p>
         </div>
         <div class="about-stats">
-          <div class="glass-card">
-            <div class="stat-number">+۱۵</div>
-            <div class="stat-label">سال تجربه</div>
-          </div>
           <div class="glass-card">
             <div class="stat-number">+۵۰۰</div>
             <div class="stat-label">پرونده موفق</div>
@@ -956,6 +932,11 @@
           <p class="service-description">طلاق، مهریه، نفقه، حضانت فرزند، اجرت‌المثل و کلیه امور خانواده</p>
         </div>
         <div class="service-card glass-card reveal">
+          <div class="service-icon">💰</div>
+          <h3 class="service-title">دعاوی مالیاتی</h3>
+          <p class="service-description">دفاع از حقوق مؤدیان، اعتراض به برگه‌های تشخیص مالیات، مشاوره مالیاتی شرکت‌ها و پرونده‌های سنگین مالیاتی</p>
+        </div>
+        <div class="service-card glass-card reveal">
           <div class="service-icon">⚖️</div>
           <h3 class="service-title">دعاوی کیفری</h3>
           <p class="service-description">دفاع از حقوق شما در پرونده‌های کیفری، جنایی و دیوان عالی کشور</p>
@@ -979,7 +960,7 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION - UPDATED WITH ALL MESSENGERS -->
+    <!-- CONTACT SECTION - WITH REAL TELEGRAM AND WHATSAPP ICONS -->
     <section id="contact" class="section">
       <div class="section-header">
         <h2 class="section-title">راه‌های ارتباطی</h2>
@@ -998,32 +979,32 @@
           </div>
         </div>
         
-        <!-- واتساپ -->
+        <!-- واتساپ با آیکون واقعی -->
         <div class="contact-item glass-card reveal">
-          <div class="contact-icon">💬</div>
+          <div class="contact-icon"><i class="fab fa-whatsapp" style="color: #25D366; font-size: 2.5rem;"></i></div>
           <div class="contact-label">واتساپ</div>
           <div class="contact-value">۰۹۱۲۴۲۶۳۵۸۷</div>
           <div class="contact-buttons">
             <a href="https://wa.me/989124263587" target="_blank" class="contact-btn whatsapp-btn">
-              <span>📱</span> چت ساده
+              <i class="fab fa-whatsapp"></i> چت ساده
             </a>
             <a href="https://wa.me/989124263587?text=سلام%20خانم%20کریمی،%20برای%20مشاوره%20حقوقی%20تماس%20می‌گیرم" target="_blank" class="contact-btn whatsapp-btn">
-              <span>✉️</span> چت با پیام
+              <i class="fab fa-whatsapp"></i> چت با پیام
             </a>
           </div>
         </div>
         
-        <!-- تلگرام با یوزرنیم جدید -->
+        <!-- تلگرام با آیکون واقعی و یوزرنیم جدید -->
         <div class="contact-item glass-card reveal">
-          <div class="contact-icon">✈️</div>
+          <div class="contact-icon"><i class="fab fa-telegram" style="color: #0088cc; font-size: 2.5rem;"></i></div>
           <div class="contact-label">تلگرام</div>
           <div class="contact-value">@karimilawyer_ir</div>
           <div class="contact-buttons">
             <a href="https://t.me/karimilawyer_ir" target="_blank" class="contact-btn telegram-btn">
-              <span>💬</span> چت در تلگرام
+              <i class="fab fa-telegram"></i> چت در تلگرام
             </a>
             <a href="https://t.me/karimilawyer_ir?text=سلام%20خانم%20کریمی،%20درمورد%20پرونده‌ام%20سوال%20دارم" target="_blank" class="contact-btn telegram-btn">
-              <span>✉️</span> ارسال پیام
+              <i class="fab fa-telegram"></i> ارسال پیام
             </a>
           </div>
           <div class="telegram-username">
