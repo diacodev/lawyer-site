@@ -42,6 +42,8 @@
       --glass-bg: rgba(18, 11, 33, 0.7);
       --glass-border: rgba(212, 175, 55, 0.15);
       --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f5e3b3 50%, #d4af37 100%);
+      --whatsapp-green: #25D366;
+      --telegram-blue: #0088cc;
     }
 
     body {
@@ -326,6 +328,7 @@
       transition: all 0.3s;
       position: relative;
       overflow: hidden;
+      display: inline-block;
     }
 
     .btn-primary {
@@ -349,6 +352,30 @@
       background: rgba(212, 175, 55, 0.1);
       transform: translateY(-3px);
       border-color: var(--pure-gold);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp-green);
+      color: white;
+      border: none;
+    }
+
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-telegram {
+      background: var(--telegram-blue);
+      color: white;
+      border: none;
+    }
+
+    .btn-telegram:hover {
+      background: #006699;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 136, 204, 0.3);
     }
 
     @keyframes fadeUp {
@@ -542,13 +569,25 @@
       text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
     }
 
-    /* ===== CONTACT SECTION ===== */
+    /* ===== CONTACT SECTION - UPDATED WITH ALL MESSENGERS ===== */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       max-width: 1000px;
       margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .contact-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     .contact-item {
@@ -565,11 +604,83 @@
       color: var(--soft-gold);
       margin-bottom: 0.5rem;
       font-weight: 500;
+      font-size: 1.1rem;
     }
 
     .contact-value {
       color: var(--white-soft);
       direction: ltr;
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-btn {
+      padding: 0.6rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .contact-btn i {
+      font-size: 1.1rem;
+    }
+
+    .contact-btn.phone-btn {
+      background: transparent;
+      border: 1px solid var(--soft-gold);
+      color: var(--soft-gold);
+    }
+
+    .contact-btn.phone-btn:hover {
+      background: var(--soft-gold);
+      color: var(--deep-purple);
+    }
+
+    .contact-btn.whatsapp-btn {
+      background: var(--whatsapp-green);
+      color: white;
+    }
+
+    .contact-btn.whatsapp-btn:hover {
+      background: #128C7E;
+    }
+
+    .contact-btn.telegram-btn {
+      background: var(--telegram-blue);
+      color: white;
+    }
+
+    .contact-btn.telegram-btn:hover {
+      background: #006699;
+    }
+
+    .contact-btn.email-btn {
+      background: transparent;
+      border: 1px solid var(--soft-gold);
+      color: var(--soft-gold);
+    }
+
+    .contact-btn.email-btn:hover {
+      background: var(--soft-gold);
+      color: var(--deep-purple);
+    }
+
+    .telegram-username {
+      font-size: 0.8rem;
+      color: var(--soft-gold);
+      margin-top: 0.3rem;
     }
 
     /* ===== FOOTER ===== */
@@ -678,10 +789,6 @@
       .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -872,27 +979,68 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION - UPDATED WITH ALL MESSENGERS -->
     <section id="contact" class="section">
       <div class="section-header">
         <h2 class="section-title">راه‌های ارتباطی</h2>
-        <div class="section-subtitle">پاسخگوی سوالات شما هستیم</div>
+        <div class="section-subtitle">از هر راهی که راحت‌تر هستید با ما در تماس باشید</div>
       </div>
       <div class="contact-grid">
+        <!-- تماس تلفنی -->
         <div class="contact-item glass-card reveal">
           <div class="contact-icon">📞</div>
-          <div class="contact-label">تلفن تماس</div>
+          <div class="contact-label">تماس تلفنی</div>
           <div class="contact-value">۰۹۱۲۴۲۶۳۵۸۷</div>
+          <div class="contact-buttons">
+            <a href="tel:+989124263587" class="contact-btn phone-btn">
+              <span>📞</span> تماس مستقیم
+            </a>
+          </div>
         </div>
+        
+        <!-- واتساپ -->
+        <div class="contact-item glass-card reveal">
+          <div class="contact-icon">💬</div>
+          <div class="contact-label">واتساپ</div>
+          <div class="contact-value">۰۹۱۲۴۲۶۳۵۸۷</div>
+          <div class="contact-buttons">
+            <a href="https://wa.me/989124263587" target="_blank" class="contact-btn whatsapp-btn">
+              <span>📱</span> چت ساده
+            </a>
+            <a href="https://wa.me/989124263587?text=سلام%20خانم%20کریمی،%20برای%20مشاوره%20حقوقی%20تماس%20می‌گیرم" target="_blank" class="contact-btn whatsapp-btn">
+              <span>✉️</span> چت با پیام
+            </a>
+          </div>
+        </div>
+        
+        <!-- تلگرام با یوزرنیم جدید -->
+        <div class="contact-item glass-card reveal">
+          <div class="contact-icon">✈️</div>
+          <div class="contact-label">تلگرام</div>
+          <div class="contact-value">@karimilawyer_ir</div>
+          <div class="contact-buttons">
+            <a href="https://t.me/karimilawyer_ir" target="_blank" class="contact-btn telegram-btn">
+              <span>💬</span> چت در تلگرام
+            </a>
+            <a href="https://t.me/karimilawyer_ir?text=سلام%20خانم%20کریمی،%20درمورد%20پرونده‌ام%20سوال%20دارم" target="_blank" class="contact-btn telegram-btn">
+              <span>✉️</span> ارسال پیام
+            </a>
+          </div>
+          <div class="telegram-username">
+            یوزرنیم: karamimlawyer_ir
+          </div>
+        </div>
+        
+        <!-- ایمیل -->
         <div class="contact-item glass-card reveal">
           <div class="contact-icon">✉️</div>
           <div class="contact-label">ایمیل</div>
           <div class="contact-value">info@samirakarimi.ir</div>
-        </div>
-        <div class="contact-item glass-card reveal">
-          <div class="contact-icon">📍</div>
-          <div class="contact-label">آدرس دفتر</div>
-          <div class="contact-value">تهران، خیابان ولیعصر، برج آرمان</div>
+          <div class="contact-buttons">
+            <a href="mailto:info@samirakarimi.ir" class="contact-btn email-btn">
+              <span>📧</span> ارسال ایمیل
+            </a>
+          </div>
         </div>
       </div>
     </section>
