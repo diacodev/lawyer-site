@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سمیرا کریمی — وکیل پایه یک دادگستری</title>
+  <meta name="description" content="دفتر وکالت سمیرا کریمی. وکیل پایه یک دادگستری، پروانه ۳۷۹۷۰. دعاوی ملکی، خانواده، مالیاتی و کیفری.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ═══ CUSTOM CURSOR ═══ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══ PRELOADER ═══ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-name">سمیرا کریمی</div>
+      <div class="preloader-counter"><span id="preloaderNum">0</span><small>%</small></div>
+      <div class="preloader-bar"><div id="preloaderBar"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══ NOISE OVERLAY ═══ -->
+  <div class="noise"></div>
+
+  <!-- ═══ SCROLL PROGRESS ═══ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-logo" data-cursor="hover">
+      <span class="logo-mark">SK</span>
+      <span class="logo-text">سمیرا کریمی</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#about" class="nav-link" data-cursor="hover">درباره</a>
+      <a href="#services" class="nav-link" data-cursor="hover">خدمات</a>
+      <a href="#process" class="nav-link" data-cursor="hover">رویکرد</a>
+      <a href="business-card.html" class="nav-link" data-cursor="hover">کارت ویزیت</a>
+    </nav>
+
+    <a href="#contact" class="nav-cta" data-cursor="hover" data-magnetic>
+      <span>مشاوره</span>
+      <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="منو">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ═══ MOBILE MENU ═══ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">درباره</a>
+    <a href="#services">خدمات</a>
+    <a href="#process">رویکرد</a>
+    <a href="business-card.html">کارت ویزیت</a>
+    <a href="#contact">تماس</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero">
+      <div class="hero-grid">
+
+        <!-- Meta top -->
+        <div class="hero-meta-top">
+          <span class="meta-item reveal-up">وکیل پایه یک دادگستری</span>
+          <span class="meta-item reveal-up" style="--d:.1s">پروانه ۳۷۹۷۰</span>
+          <span class="meta-item reveal-up" style="--d:.2s">کانون وکلای مرکز</span>
+        </div>
+
+        <!-- Name display -->
+        <h1 class="hero-name">
+          <span class="hero-line">
+            <span class="hero-word" data-split>سمیرا</span>
+          </span>
+          <span class="hero-line hero-line--shift">
+            <span class="hero-word" data-split>کریمی</span>
+            <span class="hero-accent">✦</span>
+          </span>
+        </h1>
+
+        <!-- Bottom row -->
+        <div class="hero-bottom">
+          <p class="hero-tagline reveal-up" style="--d:.8s">
+            دفاع از حقوق شما با دقت، تجربه و تعهد حرفه‌ای. هر پرونده، یک مسئولیت شخصی است.
+          </p>
+
+          <div class="hero-actions reveal-up" style="--d:1s">
+            <a href="#contact" class="btn btn-primary" data-cursor="hover" data-magnetic>
+              <span>درخواست مشاوره</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+            <a href="tel:+989124263587" class="btn btn-ghost" data-cursor="hover" data-magnetic>
+              <i class="fas fa-phone"></i>
+              <span>۰۹۱۲۴۲۶۳۵۸۷</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="scroll-cue">
+          <span>اسکرول کنید</span>
+          <div class="scroll-line"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MARQUEE ═══════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>دعاوی ملکی</span><span class="sep">✦</span>
+        <span>حقوق خانواده</span><span class="sep">✦</span>
+        <span>دعاوی مالیاتی</span><span class="sep">✦</span>
+        <span>دفاع کیفری</span><span class="sep">✦</span>
+        <span>قراردادها</span><span class="sep">✦</span>
+        <span>دعاوی ملکی</span><span class="sep">✦</span>
+        <span>حقوق خانواده</span><span class="sep">✦</span>
+        <span>دعاوی مالیاتی</span><span class="sep">✦</span>
+        <span>دفاع کیفری</span><span class="sep">✦</span>
+        <span>قراردادها</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="section about" id="about">
+      <div class="section-head">
+        <span class="section-num reveal-up">01</span>
+        <h2 class="section-title reveal-up" style="--d:.1s">درباره</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-portrait reveal-up" style="--d:.2s">
+          <div class="portrait-frame">
+            <div class="portrait-placeholder">
+              <span>SK</span>
+              <small>پروانه ۳۷۹۷۰</small>
+            </div>
+          </div>
+          <div class="portrait-caption">
+            <span>سمیرا کریمی</span>
+            <span>وکیل دادگستری</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="about-lead reveal-up" style="--d:.3s">
+            وکیل پایه یک دادگستری با تمرکز بر <em>دعاوی پیچیده</em> و پرونده‌هایی که نیازمند
+            دقت، استراتژی و تجربه‌اند.
+          </p>
+
+          <div class="about-body">
+            <p class="reveal-up" style="--d:.4s">
+              سال‌ها تجربه در دعاوی ملکی، حقوق خانواده، پرونده‌های مالیاتی و دفاع کیفری،
+              به من آموخته که هر پرونده داستان خودش را دارد — و راه‌حل خودش را.
+            </p>
+            <p class="reveal-up" style="--d:.5s">
+              رویکرد من ساده است: شفافیت کامل، ارتباط مستقیم، و دفاعی که بر پایه
+              درک دقیق قانون و واقعیت‌های پرونده ساخته می‌شود.
+            </p>
+          </div>
+
+          <div class="about-stats reveal-up" style="--d:.6s">
+            <div class="stat">
+              <span class="stat-num" data-count="15">۰</span>
+              <span class="stat-label">سال تجربه</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="100">۰</span>
+              <span class="stat-suffix">%</span>
+              <span class="stat-label">تعهد حرفه‌ای</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">۳۷۹۷۰</span>
+              <span class="stat-label">شماره پروانه</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SERVICES ═══════════════ -->
+    <section class="section services" id="services">
+      <div class="section-head">
+        <span class="section-num reveal-up">02</span>
+        <h2 class="section-title reveal-up" style="--d:.1s">حوزه‌های تخصصی</h2>
+      </div>
+
+      <div class="services-list">
+
+        <article class="service-row" data-cursor="hover">
+          <span class="service-num">01</span>
+          <h3 class="service-title">دعاوی ملکی</h3>
+          <p class="service-desc">
+            خرید و فروش، اجاره، خلع ید، تقسیم ارث، سرقفلی و هر آنچه به ملک و مالکیت مربوط است.
+          </p>
+          <span class="service-arrow"><i class="fas fa-arrow-left"></i></span>
+        </article>
+
+        <article class="service-row" data-cursor="hover">
+          <span class="service-num">02</span>
+          <h3 class="service-title">حقوق خانواده</h3>
+          <p class="service-desc">
+            طلاق، مهریه، نفقه، حضانت فرزند و اجرت‌المثل — با حساسیت و رازداری کامل.
+          </p>
+          <span class="service-arrow"><i class="fas fa-arrow-left"></i></span>
+        </article>
+
+        <article class="service-row" data-cursor="hover">
+          <span class="service-num">03</span>
+          <h3 class="service-title">دعاوی مالیاتی</h3>
+          <p class="service-desc">
+            دفاع از مؤدیان، اعتراض به برگ تشخیص، مشاوره مالیاتی شرکت‌ها و پرونده‌های سنگین.
+          </p>
+          <span class="service-arrow"><i class="fas fa-arrow-left"></i></span>
+        </article>
+
+        <article class="service-row" data-cursor="hover">
+          <span class="service-num">04</span>
+          <h3 class="service-title">دفاع کیفری</h3>
+          <p class="service-desc">
+            دفاع تخصصی در پرونده‌های کیفری، جنایی و مراحل تجدیدنظر و دیوان عالی کشور.
+          </p>
+          <span class="service-arrow"><i class="fas fa-arrow-left"></i></span>
+        </article>
+
+        <article class="service-row" data-cursor="hover">
+          <span class="service-num">05</span>
+          <h3 class="service-title">قراردادها و مشاوره تجاری</h3>
+          <p class="service-desc">
+            تنظیم و بررسی قراردادهای تجاری، شرکتی، ملکی و بین‌المللی با نگاه به آینده.
+          </p>
+          <span class="service-arrow"><i class="fas fa-arrow-left"></i></span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ PROCESS ═══════════════ -->
+    <section class="section process" id="process">
+      <div class="section-head">
+        <span class="section-num reveal-up">03</span>
+        <h2 class="section-title reveal-up" style="--d:.1s">نحوه کار</h2>
+        <p class="section-sub reveal-up" style="--d:.2s">
+          یک مسیر شفاف از اولین تماس تا نتیجه نهایی
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-step reveal-up" style="--d:.1s">
+          <span class="process-num">۰۱</span>
+          <h3>گفت‌وگوی اولیه</h3>
+          <p>گوش می‌دهم. داستان شما را می‌فهمم و واقعیت‌های پرونده را بررسی می‌کنم.</p>
+        </div>
+
+        <div class="process-step reveal-up" style="--d:.2s">
+          <span class="process-num">۰۲</span>
+          <h3>ارزیابی حقوقی</h3>
+          <p>مسیرهای قانونی موجود را با شما در میان می‌گذارم — صریح و بدون تعارف.</p>
+        </div>
+
+        <div class="process-step reveal-up" style="--d:.3s">
+          <span class="process-num">۰۳</span>
+          <h3>تدوین استراتژی</h3>
+          <p>بهترین مسیر دفاعی یا پیگیری را طراحی می‌کنیم و اسناد آماده می‌شوند.</p>
+        </div>
+
+        <div class="process-step reveal-up" style="--d:.4s">
+          <span class="process-num">۰۴</span>
+          <h3>پیگیری تا نتیجه</h3>
+          <p>در تمام مراحل همراه شما هستم — از جلسات دادگاه تا اجرای حکم.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ CREDENTIALS ═══════════════ -->
+    <section class="credentials">
+      <div class="credentials-inner">
+        <span class="credential-label reveal-up">پروانه وکالت پایه یک</span>
+        <div class="credential-number reveal-up" style="--d:.1s">۳۷۹۷۰</div>
+        <span class="credential-issuer reveal-up" style="--d:.2s">
+          صادر شده توسط کانون وکلای دادگستری مرکز
+        </span>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="section contact" id="contact">
+      <div class="section-head">
+        <span class="section-num reveal-up">04</span>
+        <h2 class="section-title reveal-up" style="--d:.1s">تماس</h2>
+      </div>
+
+      <div class="contact-content">
+        <p class="contact-lead reveal-up">
+          برای هماهنگی مشاوره، از هر راهی که راحت‌تر هستید در تماس باشید.
+        </p>
+
+        <!-- Direct call big -->
+        <a href="tel:+989124263587" class="contact-phone reveal-up" style="--d:.1s" data-cursor="hover">
+          <span class="contact-phone-label">تلفن مستقیم</span>
+          <span class="contact-phone-num">۰۹۱۲۴۲۶۳۵۸۷</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+
+        <!-- Channels -->
+        <div class="channels">
+          <a href="https://wa.me/989124263587?text=سلام%20خانم%20کریمی،%20برای%20مشاوره%20حقوقی%20تماس%20می‌گیرم"
+             target="_blank" rel="noopener"
+             class="channel reveal-up" style="--d:.2s" data-cursor="hover">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <span>واتساپ</span>
+              <small>پیام فوری</small>
+            </div>
+          </a>
+
+          <a href="https://t.me/karimilawyer_ir"
+             target="_blank" rel="noopener"
+             class="channel reveal-up" style="--d:.3s" data-cursor="hover">
+            <i class="fab fa-telegram"></i>
+            <div>
+              <span>تلگرام</span>
+              <small>@karimilawyer_ir</small>
+            </div>
+          </a>
+
+          <a href="mailto:info@samirakarimi.ir"
+             class="channel reveal-up" style="--d:.4s" data-cursor="hover">
+            <i class="far fa-envelope"></i>
+            <div>
+              <span>ایمیل</span>
+              <small>info@samirakarimi.ir</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-mark">SK</span>
+        <div>
+          <div>سمیرا کریمی</div>
+          <small>وکیل پایه یک دادگستری</small>
+        </div>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#about">درباره</a>
+        <a href="#services">خدمات</a>
+        <a href="#contact">تماس</a>
+        <a href="business-card.html">کارت ویزیت</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© ۱۴۰۴ — تمامی حقوق محفوظ است</span>
+      <span>پروانه ۳۷۹۷۰ | کانون وکلای مرکز</span>
+    </div>
+  </footer>
+
+  <!-- ═══ FLOATING BUTTONS ═══ -->
+  <a href="tel:+989124263587" class="float-call" aria-label="تماس">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <button class="back-top" id="backTop" aria-label="بازگشت به بالا">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
