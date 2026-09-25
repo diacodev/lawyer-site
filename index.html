@@ -4,148 +4,315 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>سمیرا کریمی — وکیل پایه یک دادگستری</title>
+<meta name="description" content="دفتر وکالت سمیرا کریمی — پروانه ۳۷۹۷۰">
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<!-- نوار پیشرفت -->
+<div class="cursor" id="cursor"></div>
 <div class="progress" id="progress"></div>
 
-<!-- ناوبری -->
+<!-- ═══ ناوبری ═══ -->
 <header class="nav" id="nav">
-  <a href="#top" class="logo">SK</a>
-  <nav class="menu">
+  <a href="#top" class="nav-logo">
+    <span class="logo-mark">SK</span>
+    <span class="logo-name">سمیرا کریمی</span>
+  </a>
+  <nav class="nav-links">
     <a href="#about">درباره</a>
     <a href="#services">خدمات</a>
     <a href="#contact">تماس</a>
   </nav>
-  <a href="tel:+989124263587" class="tel" dir="ltr">۰۹۱۲۴۲۶۳۵۸۷</a>
+  <a href="tel:+989124263587" class="nav-tel">
+    <span class="pulse"></span>
+    <span dir="ltr">۰۹۱۲۴۲۶۳۵۸۷</span>
+  </a>
 </header>
 
-<!-- ═══ هیرو با ویدیو اسکرول‌کنترل ═══ -->
-<section class="hero" id="hero">
-  <div class="video-wrap">
-    <video id="video" src="./hero.mp4" muted playsinline webkit-playsinline preload="auto"></video>
-    <div class="overlay"></div>
+<main id="top">
+
+  <!-- ═══ هیرو ═══ -->
+  <section class="hero">
+    <div class="hero-meta">
+      <span>EST. ۱۳۸۹</span>
+      <span>TEHRAN</span>
+      <span>PRO. ۳۷۹۷۰</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line">
+        <span class="w">سمیرا</span>
+      </span>
+      <span class="line line-shift">
+        <span class="w">کریمی</span>
+        <span class="asterisk">✱</span>
+      </span>
+    </h1>
+
+    <div class="hero-bottom">
+      <div class="hero-l">
+        <p class="hero-tag">
+          وکیل پایه یک دادگستری — با تمرکز بر دعاوی پیچیده،
+          دفاعی که بر پایه <em>دقت</em> و <em>تجربه</em> ساخته می‌شود.
+        </p>
+      </div>
+      <div class="hero-r">
+        <a href="#contact" class="btn">
+          <span>شروع گفت‌وگو</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="1.5">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-bar">
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ مارکی ═══ -->
+  <div class="marquee">
+    <div class="marquee-inner">
+      <span>دعاوی ملکی</span><i>◆</i>
+      <span>حقوق خانواده</span><i>◆</i>
+      <span>دعاوی مالیاتی</span><i>◆</i>
+      <span>دفاع کیفری</span><i>◆</i>
+      <span>قراردادها</span><i>◆</i>
+      <span>مشاوره حقوقی</span><i>◆</i>
+      <span>دعاوی ملکی</span><i>◆</i>
+      <span>حقوق خانواده</span><i>◆</i>
+      <span>دعاوی مالیاتی</span><i>◆</i>
+      <span>دفاع کیفری</span><i>◆</i>
+      <span>قراردادها</span><i>◆</i>
+      <span>مشاوره حقوقی</span><i>◆</i>
+    </div>
   </div>
 
-  <div class="texts" id="texts">
-    <p class="text" data-i="0">اعتماد، در جزئیات ساخته می‌شود.</p>
-    <p class="text" data-i="1">هر پرونده، یک داستان منحصر به فرد است.</p>
-    <p class="text" data-i="2">دفاع، هنر شنیدن پیش از سخن گفتن است.</p>
-    <p class="text" data-i="3">نتیجه، حاصل دقت و استراتژی است.</p>
-  </div>
+  <!-- ═══ درباره ═══ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <span class="sec-name">درباره</span>
+      </div>
 
-  <div class="hero-info">
-    <h1>سمیرا کریمی</h1>
-    <p>وکیل پایه یک دادگستری</p>
-    <span>پروانه ۳۷۹۷۰</span>
-  </div>
-</section>
+      <h2 class="about-title">
+        <span class="word">وکالت،</span>
+        <span class="word">فقط</span>
+        <span class="word"><em>دانستن قانون نیست.</em></span>
+      </h2>
 
-<!-- ═══ درباره ═══ -->
-<section class="section" id="about">
-  <div class="container">
-    <span class="label">۰۱ — درباره</span>
-    <h2>وکالت، فقط<br>دانستن قانون نیست.</h2>
-    <p class="lead">
-      وکالت هنر <em>گوش دادن</em> است — به داستان شما، به نگرانی‌ها، به آنچه گفته نمی‌شود. 
-      از دل این درک، یک استراتژی دفاعی واقعی متولد می‌شود.
+      <div class="about-grid">
+        <div class="about-lead">
+          <p>
+            وکالت هنر <em>گوش دادن</em> است. به داستان شما، به نگرانی‌ها،
+            به آنچه گفته نمی‌شود. از دل این درک، استراتژی دفاعی متولد می‌شود.
+          </p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">۱۵</span>
+            <span class="stat-lbl">سال تجربه میدانی</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">۳۷۹۷۰</span>
+            <span class="stat-lbl">شماره پروانه</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">۱۰۰٪</span>
+            <span class="stat-lbl">رازداری حرفه‌ای</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ خدمات ═══ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <span class="sec-name">حوزه‌های تخصصی</span>
+      </div>
+    </div>
+
+    <div class="services-list">
+      <a class="service" href="#contact">
+        <span class="s-num">۰۱</span>
+        <span class="s-title">دعاوی ملکی</span>
+        <span class="s-desc">خرید و فروش · اجاره · خلع ید · سرقفلی · تقسیم ارث</span>
+        <span class="s-arrow">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1">
+            <path d="M7 17L17 7M17 7H8M17 7V16"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="service" href="#contact">
+        <span class="s-num">۰۲</span>
+        <span class="s-title">حقوق خانواده</span>
+        <span class="s-desc">طلاق · مهریه · نفقه · حضانت · اجرت‌المثل</span>
+        <span class="s-arrow">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1">
+            <path d="M7 17L17 7M17 7H8M17 7V16"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="service" href="#contact">
+        <span class="s-num">۰۳</span>
+        <span class="s-title">دعاوی مالیاتی</span>
+        <span class="s-desc">اعتراض به برگ تشخیص · دفاع از مؤدیان · پرونده‌های شرکت‌ها</span>
+        <span class="s-arrow">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1">
+            <path d="M7 17L17 7M17 7H8M17 7V16"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="service" href="#contact">
+        <span class="s-num">۰۴</span>
+        <span class="s-title">دفاع کیفری</span>
+        <span class="s-desc">پرونده‌های کیفری · جنایی · تجدیدنظر · دیوان عالی</span>
+        <span class="s-arrow">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1">
+            <path d="M7 17L17 7M17 7H8M17 7V16"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="service" href="#contact">
+        <span class="s-num">۰۵</span>
+        <span class="s-title">قراردادها</span>
+        <span class="s-desc">قراردادهای تجاری · شرکتی · ملکی · بین‌المللی</span>
+        <span class="s-arrow">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1">
+            <path d="M7 17L17 7M17 7H8M17 7V16"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="service" href="#contact">
+        <span class="s-num">۰۶</span>
+        <span class="s-title">مشاوره حقوقی</span>
+        <span class="s-desc">مشاوره تخصصی پیش از هر اقدام حقوقی</span>
+        <span class="s-arrow">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1">
+            <path d="M7 17L17 7M17 7H8M17 7V16"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ پروانه ═══ -->
+  <section class="license">
+    <div class="lic-inner">
+      <span class="lic-lbl">پروانه وکالت پایه یک</span>
+      <span class="lic-num" data-count="37970">۰</span>
+      <span class="lic-sub">کانون وکلای دادگستری مرکز</span>
+    </div>
+  </section>
+
+  <!-- ═══ تماس ═══ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <span class="sec-name">تماس</span>
+      </div>
+
+      <h2 class="contact-title">
+        بیایید<br>
+        <em>صحبت کنیم.</em>
+      </h2>
+
+      <a href="tel:+989124263587" class="contact-main">
+        <span class="cm-lbl">Direct</span>
+        <span class="cm-num" dir="ltr">۰۹۱۲۴۲۶۳۵۸۷</span>
+        <span class="cm-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </span>
+      </a>
+
+      <div class="contact-channels">
+        <a href="https://wa.me/989124263587" target="_blank" class="channel">
+          <span class="ch-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M17.6 6.4A7.85 7.85 0 0012 4a7.94 7.94 0 00-7.94 7.94 7.9 7.9 0 001.08 4L4 20l4.18-1.1a7.96 7.96 0 003.82.97h.01A7.94 7.94 0 0020 11.94a7.9 7.9 0 00-2.4-5.54zM12 18.6a6.6 6.6 0 01-3.36-.92l-.24-.14-2.48.65.66-2.42-.15-.25a6.63 6.63 0 016.53-10.24 6.6 6.6 0 013.95 1.7A6.63 6.63 0 0118.6 12 6.6 6.6 0 0112 18.6z"/>
+            </svg>
+          </span>
+          <span class="ch-info">
+            <span class="ch-t">واتساپ</span>
+            <span class="ch-s">WhatsApp</span>
+          </span>
+          <span class="ch-arrow">→</span>
+        </a>
+
+        <a href="https://t.me/karimilawyer_ir" target="_blank" class="channel">
+          <span class="ch-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M22 3L2 10l6 2 2 7 3-4 6 4 3-16z"/>
+            </svg>
+          </span>
+          <span class="ch-info">
+            <span class="ch-t">تلگرام</span>
+            <span class="ch-s">@karimilawyer_ir</span>
+          </span>
+          <span class="ch-arrow">→</span>
+        </a>
+
+        <a href="mailto:info@samirakarimi.ir" class="channel">
+          <span class="ch-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <path d="M22 6l-10 7L2 6"/>
+            </svg>
+          </span>
+          <span class="ch-info">
+            <span class="ch-t">ایمیل</span>
+            <span class="ch-s">info@samirakarimi.ir</span>
+          </span>
+          <span class="ch-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ بیانیه پایانی ═══ -->
+  <section class="final">
+    <p class="final-txt">
+      در مسیری که<br>
+      <em>تنها نیستید.</em>
     </p>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ خدمات ═══ -->
-<section class="section services" id="services">
-  <div class="container">
-    <span class="label">۰۲ — خدمات</span>
-    <h2>حوزه‌های تخصصی</h2>
-    <div class="services-grid">
-      <div class="card">
-        <span class="num">۰۱</span>
-        <h3>دعاوی ملکی</h3>
-        <p>خرید و فروش، اجاره، خلع ید، سرقفلی، تقسیم ارث.</p>
-      </div>
-      <div class="card">
-        <span class="num">۰۲</span>
-        <h3>حقوق خانواده</h3>
-        <p>طلاق، مهریه، نفقه، حضانت — با رازداری کامل.</p>
-      </div>
-      <div class="card">
-        <span class="num">۰۳</span>
-        <h3>دعاوی مالیاتی</h3>
-        <p>اعتراض به برگ تشخیص، دفاع از مؤدیان.</p>
-      </div>
-      <div class="card">
-        <span class="num">۰۴</span>
-        <h3>دفاع کیفری</h3>
-        <p>دفاع در پرونده‌های کیفری و دیوان عالی کشور.</p>
-      </div>
-      <div class="card">
-        <span class="num">۰۵</span>
-        <h3>قراردادها</h3>
-        <p>تنظیم قراردادهای تجاری، شرکتی و بین‌المللی.</p>
-      </div>
-      <div class="card">
-        <span class="num">۰۶</span>
-        <h3>مشاوره حقوقی</h3>
-        <p>مشاوره تخصصی پیش از هر اقدام حقوقی.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ پروانه ═══ -->
-<section class="license">
-  <div class="container">
-    <span class="label">پروانه وکالت پایه یک</span>
-    <div class="license-num">۳۷۹۷۰</div>
-    <span class="issuer">کانون وکلای دادگستری مرکز</span>
-  </div>
-</section>
-
-<!-- ═══ تماس ═══ -->
-<section class="section" id="contact">
-  <div class="container">
-    <span class="label">۰۳ — تماس</span>
-    <h2>در ارتباط باشیم</h2>
-    
-    <a href="tel:+989124263587" class="contact-tel">
-      <span>تماس مستقیم</span>
-      <strong dir="ltr">۰۹۱۲۴۲۶۳۵۸۷</strong>
-      <i class="fas fa-arrow-left"></i>
-    </a>
-
-    <div class="contact-grid">
-      <a href="https://wa.me/989124263587" target="_blank" class="contact-card">
-        <i class="fab fa-whatsapp"></i>
-        <div><span>واتساپ</span><small>پیام فوری</small></div>
-      </a>
-      <a href="https://t.me/karimilawyer_ir" target="_blank" class="contact-card">
-        <i class="fab fa-telegram"></i>
-        <div><span>تلگرام</span><small>@karimilawyer_ir</small></div>
-      </a>
-      <a href="mailto:info@samirakarimi.ir" class="contact-card">
-        <i class="far fa-envelope"></i>
-        <div><span>ایمیل</span><small>info@samirakarimi.ir</small></div>
-      </a>
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- ═══ فوتر ═══ -->
 <footer class="footer">
-  <div class="container">
-    <span>سمیرا کریمی — وکیل پایه یک دادگستری</span>
-    <span>پروانه ۳۷۹۷۰ | © ۱۴۰۴</span>
+  <div class="foot-container">
+    <div class="foot-brand">
+      <span class="logo-mark">SK</span>
+      <div>
+        <span>سمیرا کریمی</span>
+        <small>وکیل پایه یک دادگستری</small>
+      </div>
+    </div>
+    <div class="foot-info">
+      <span>پروانه ۳۷۹۷۰</span>
+      <span>© ۱۴۰۴</span>
+    </div>
   </div>
 </footer>
-
-<!-- دکمه شناور تماس -->
-<a href="tel:+989124263587" class="fab">
-  <i class="fas fa-phone"></i>
-</a>
 
 <script src="./script.js" defer></script>
 </body>

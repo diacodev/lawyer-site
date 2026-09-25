@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════
-   VIDEO SCROLL CONTROL
+   EDITORIAL LUXURY — Interactions
    ═══════════════════════════════════════ */
 
 (() => {
@@ -8,130 +8,104 @@
   const $  = (s) => document.querySelector(s);
   const $$ = (s) => [...document.querySelectorAll(s)];
 
-  const hero = $('#hero');
-  const video = $('#video');
-  const texts = $$('.text');
-  const heroInfo = $('.hero-info');
-  const nav = $('#nav');
-  const progressBar = $('#progress');
+  /* ─── ۱. Cursor ─── */
+  const cursor = $('#cursor');
+  if (cursor && matchMedia('(pointer: fine)').matches) {
+    let mx = innerWidth / 2, my = innerHeight / 2;
+    let cx = mx, cy = my;
 
-  let videoReady = false;
-  let duration = 0;
-  let targetTime = 0;
-  let currentTime = 0;
-  let rafId = null;
-
-  /* ─── آماده‌سازی ویدیو ─── */
-  const onReady = () => {
-    if (video.duration > 0 && isFinite(video.duration)) {
-      duration = video.duration;
-      videoReady = true;
-      console.log('✅ ویدیو آماده — مدت:', duration.toFixed(2), 'ثانیه');
-    }
-  };
-
-  if (video) {
-    video.addEventListener('loadedmetadata', onReady);
-    video.addEventListener('loadeddata', onReady);
-    video.addEventListener('canplay', onReady);
-
-    // برای iOS: یک بار play/pause تا seek آزاد بشه
-    video.addEventListener('loadeddata', () => {
-      const p = video.play();
-      if (p && p.then) {
-        p.then(() => {
-          video.pause();
-          video.currentTime = 0;
-        }).catch(() => {});
-      }
-    }, { once: true });
-
-    video.addEventListener('error', () => {
-      console.error('❌ خطای ویدیو:', video.error);
+    addEventListener('mousemove', (e) => {
+      mx = e.clientX;
+      my = e.clientY;
     });
 
-    // چک دوره‌ای برای اطمینان
-    const check = setInterval(() => {
-      if (video.duration > 0 && isFinite(video.duration)) {
-        duration = video.duration;
-        videoReady = true;
-        clearInterval(check);
-      }
-    }, 300);
+    const loop = () => {
+      cx += (mx - cx) * 0.2;
+      cy += (my - cy) * 0.2;
+      cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(loop);
+    };
+    loop();
+
+    document.addEventListener('mouseover', (e) => {
+      const t = e.target.closest('a, button, .service, .channel, .stat');
+      cursor.classList.toggle('big', !!t);
+    });
   }
 
-  /* ─── به‌روزرسانی نرم زمان ویدیو ─── */
-  const updateVideoTime = () => {
-    if (!videoReady) {
-      rafId = null;
-      return;
-    }
-    const diff = targetTime - currentTime;
-    if (Math.abs(diff) > 0.005) {
-      currentTime += diff * 0.2; // نرم‌سازی
-      try {
-        video.currentTime = currentTime;
-      } catch (e) {}
-      rafId = requestAnimationFrame(updateVideoTime);
-    } else {
-      rafId = null;
-    }
+  /* ─── ۲. Progress bar ─── */
+  const progress = $('#progress');
+  const onScrollProgress = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    if (progress) progress.style.width = (scrollY / h * 100) + '%';
   };
 
-  /* ─── کنترل با اسکرول ─── */
-  const onScroll = () => {
-    const y = window.scrollY;
-
-    // نوار پیشرفت
-    const docH = document.documentElement.scrollHeight - window.innerHeight;
-    if (progressBar) progressBar.style.width = (y / docH * 100) + '%';
-
-    // ناوبری
-    if (nav) nav.classList.toggle('on', y > 40);
-
-    // کنترل ویدیو
-    if (hero && videoReady) {
-      const rect = hero.getBoundingClientRect();
-      const total = rect.height;
-      const scrolled = Math.max(0, Math.min(total, -rect.top));
-      const progress = Math.min(1, scrolled / total);
-
-      // هدف زمانی
-      targetTime = progress * duration;
-      if (!rafId) rafId = requestAnimationFrame(updateVideoTime);
-
-      // کنترل متن‌ها
-      const idx = Math.min(texts.length - 1, Math.floor(progress * texts.length));
-      texts.forEach((t, i) => {
-        t.classList.toggle('active', i === idx);
-      });
-
-      // پنهان کردن اطلاعات وقتی از هیرو خارج شدیم
-      if (heroInfo) {
-        heroInfo.classList.toggle('hide', progress > 0.9);
-      }
-    }
+  /* ─── ۳. Nav state ─── */
+  const nav = $('#nav');
+  const onScrollNav = () => {
+    if (nav) nav.classList.toggle('on', scrollY > 40);
   };
 
-  /* ─── ظاهر شدن با اسکرول ─── */
+  /* ─── ۴. Scroll binding ─── */
+  addEventListener('scroll', () => {
+    onScrollProgress();
+    onScrollNav();
+  }, { passive: true });
+  onScrollProgress();
+  onScrollNav();
+
+  /* ─── ۵. Reveal on scroll ─── */
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in');
+        io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
 
-  $$('.section h2, .section .lead, .section .label, .card, .contact-card, .contact-tel')
-    .forEach((el) => io.observe(el));
+  $$('.reveal, .about-title').forEach((el) => io.observe(el));
 
-  /* ─── اتصال رویدادها ─── */
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  /* ─── ۶. عدد پروانه — شمارنده ─── */
+  const licNum = $('.lic-num');
+  if (licNum) {
+    const target = 37970;
+    const faDigits = '۰۱۲۳۴۵۶۷۸۹';
+    const toFa = (n) => String(n).split('').map(d => faDigits[+d]).join('');
 
-  // چک اولیه
-  onScroll();
-  setTimeout(onScroll, 500);
-  setTimeout(onScroll, 1500);
+    let triggered = false;
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !triggered) {
+          triggered = true;
+          const dur = 1800;
+          const start = performance.now();
+          const tick = (now) => {
+            const p = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - p, 4);
+            const val = Math.floor(eased * target);
+            licNum.textContent = toFa(val);
+            if (p < 1) requestAnimationFrame(tick);
+            else licNum.textContent = toFa(target);
+          };
+          requestAnimationFrame(tick);
+        }
+      });
+    }, { threshold: 0.4 });
+    io2.observe(licNum);
+  }
+
+  /* ─── ۷. Smooth scroll ─── */
+  $$('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      const t = document.querySelector(id);
+      if (!t) return;
+      e.preventDefault();
+      const y = t.getBoundingClientRect().top + scrollY - 60;
+      scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
 
 })();
